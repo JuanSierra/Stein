@@ -8,7 +8,7 @@ const app = require("./app").app,
   session = require("express-session"),
   cookieParser = require("cookie-parser");
 
-const MongoStore = require("connect-mongo")(session),
+const MongoStore = require('connect-mongo'),
   sessionSecret =
     process.env.STEIN_SESSION_SECRET || crypto.randomBytes(6).toString("hex");
 
@@ -16,7 +16,7 @@ let sessionOptions = {
   secret: sessionSecret,
   saveUninitialized: false,
   resave: false,
-  store: new MongoStore({ url: process.env.STEIN_MONGO_URL }),
+  store: MongoStore.create({ mongoUrl: process.env.STEIN_MONGO_URL }),
   cookie: { expires: false }
 };
 

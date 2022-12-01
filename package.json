@@ -4,13 +4,12 @@
   "homepage": "https://steinhq.com/",
   "description": "Use Google Sheets as a no-setup data store",
   "main": "index.js",
-  "scripts": {
-    "start": "pm2 start bin/pm2.config.js --env production",
-    "kill": "pm2 kill",
-    "dev": "cross-env NODE_ENV=development nodemon index.js"
-  },
   "bin": {
     "stein": "./bin/start-stein.js"
+  },
+  "scripts": {
+    "start": "pm2 --no-daemon start bin/pm2.config.js --env production",
+    "kill": "pm2 kill"
   },
   "keywords": [
     "google sheets",
@@ -27,29 +26,29 @@
   "license": "MIT",
   "dependencies": {
     "basic-auth": "^2.0.1",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.1.0",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
-    "connect-mongo": "^2.0.3",
+    "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
-    "dotenv": "^8.0.0",
-    "ejs": "^2.6.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
-    "google-auth-library": "^2.0.0",
-    "googleapis": "^34.0.0",
-    "mongoose": "^5.3.0",
-    "ow": "^0.12.0",
-    "passport": "^0.4.0",
+    "google-auth-library": "^8.7.0",
+    "googleapis": "^109.0.1",
+    "mongoose": "^6.7.5",
+    "ow": "^0.28.1",
+    "passport": "^0.6.0",
     "passport-google-oauth": "2.0.0",
-    "pm2": "^3.5.1",
+    "pm2": "^5.2.2",
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
+    "cross-env": "^7.0.3",
     "errorhandler": "^1.5.0",
-    "nodemon": "^1.18.10",
+    "nodemon": "^2.0.20",
     "response-time": "^2.3.2"
   },
   "eslintConfig": {
