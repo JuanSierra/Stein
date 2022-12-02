@@ -15,7 +15,7 @@ const logInMiddleware = require("./logInMiddleware"),
   deleteRow = require("./deleteRow"),
   updateRequestCount = require("./updateRequestCount"),
   passportAuthCallback = require("./passportAuthCallback"),
-  ow = require("ow"),
+  ow = require("ow").default,
   logout = require("./logout");
 
 // actual controllers

@@ -10,7 +10,7 @@
   "scripts": {
     "start": "pm2 --no-daemon start bin/pm2.config.js --env production",
     "kill": "pm2 kill"
-  },
+	},
   "keywords": [
     "google sheets",
     "database",
